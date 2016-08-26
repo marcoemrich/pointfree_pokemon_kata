@@ -42,16 +42,13 @@ const debug = curry((title, value) => {
   return value;
 })
 
-describe("PokemonApp" , () => {
+describe("Pokemon-Kata" , () => {
   it("should find the nearest Pokemon distance", () => {
-    expect(
-      compose(reduce(min, 100),
-              map(distance(playerPosition)),
-              pluck("position"),
-              filter(where({type: equals("Normal")}))
-            )(mons)
-    ).toBeCloseTo(21.9, 1);
-  })
+    expect("Your Code Here").toBeCloseTo(21.9, 1);
+  });
+
+  it("should find the name of the nearest Pokemon");
+
 });
 
 describe("distance", () => {
