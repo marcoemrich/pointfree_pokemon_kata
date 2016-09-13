@@ -25,7 +25,7 @@ const x = pos => pos[0];
 const y = pos => pos[1];
 
 // number -> number
-const square = x => x**2;
+const square = x => Math.pow(x, 2);
 
 // [numbers] -> number
 const absDelta = compose(Math.abs, apply(subtract));
