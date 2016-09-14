@@ -30,7 +30,7 @@ const square = x => Math.pow(x, 2);
 // [numbers] -> number
 const absDelta = compose(Math.abs, apply(subtract));
 
-// [positions] -> number
+// [position1, position2] -> number
 const distance = curryN(
   2, compose(Math.sqrt, sum, map(square), map(absDelta), zip)
 );
@@ -41,11 +41,11 @@ const debug = curry((title, value) => {
 })
 
 describe("Pokemon-Kata" , () => {
-  it("should find the nearest Pokemon distance", () => {
+  it("should find the nearest distance to a Pokemon of type 'Normal'", () => {
     expect("Your Code Here").toBeCloseTo(21.9, 1);
   });
 
-  it("should find the name of the nearest Pokemon");
+  it("should find the name of the nearest Pokemon of type 'Normal'");
 
 });
 
