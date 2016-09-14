@@ -30,11 +30,9 @@ const square = x => x**2;
 // [numbers] -> number
 const absDelta = compose(Math.abs, apply(subtract));
 
-const toArray = (...args) => args
-
 // [positions] -> number
 const distance = curryN(
-  2, compose(Math.sqrt, sum, map(square), map(absDelta), apply(zip), toArray)
+  2, compose(Math.sqrt, sum, map(square), map(absDelta), zip)
 );
 
 const debug = curry((title, value) => {
